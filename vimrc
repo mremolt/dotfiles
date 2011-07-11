@@ -19,6 +19,8 @@ let mapleader = ","
 " Set encoding
 set encoding=utf-8
 
+" deactivate the strange beHGavoiur of arrow keys in insert mode (prints ABCD)
+
 " Whitespace stuff
 set nowrap
 set tabstop=2

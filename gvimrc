@@ -1,17 +1,9 @@
-" Fullscreen takes up entire screen
-set fuoptions=maxhorz,maxvert
-
 " Command-e for ConqueTerm
-map <D-e> :call StartTerm()<CR>
+" map <D-e> :call StartTerm()<CR>
 
-" Command-/ to toggle comments
+" Ctrl-c to toggle comments
 map <C-c> <plug>NERDCommenterToggle<CR>
 :imap <C-c> <Esc><plug>NERDCommenterToggle<CR>i
-
-
-" Command->< to increase/decrease indentation
-vmap <C->> >gv
-vmap <D-<> <gv
 
 " Don't beep
 set visualbell
@@ -175,8 +167,3 @@ call s:DefineCommand("touch", "Touch")
 call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
 call s:DefineCommand("mkdir", "Mkdir")
-
-" Include user's local vim config
-if filereadable(expand("~/.gvimrc.local"))
-  source ~/.gvimrc.local
-endif
