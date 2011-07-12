@@ -1,7 +1,9 @@
-if filereadable(expand("~/.vim/vundle.vim"))
-  source ~/.vim/vundle.vim
-endif
+" vundle config
+source ~/.vim/vundle.vim
+" helper functions
+source ~/.vim/functions.vim
 
+"set term=builtin_ansi
 set nocompatible
 
 " activate solarized theme
@@ -108,10 +110,6 @@ filetype plugin indent on
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
 
-" Opens a tab edit command with the path of the currently edited file filled in
-" Normal mode: <Leader>t
-map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
-
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
@@ -181,8 +179,8 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Auto_Open = 0
 
-" auto format the code
+" auto indent the code
 map <leader>f 1G=G
 
-" load last file in buffer
+" load last file in buffer to current window
 map <leader><leader> <C-^>

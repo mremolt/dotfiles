@@ -35,13 +35,13 @@ Bundle 'pangloss/vim-javascript'
 Bundle 'hallettj/jslint.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
+
 Bundle 'taq/vim-rspec'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tsaleh/vim-align'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'Townk/vim-autoclose'
 
 Bundle 'repeat.vim'
 
