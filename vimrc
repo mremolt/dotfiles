@@ -1,5 +1,5 @@
-if filereadable(expand("~/.vim/vundle.conf"))
-  source ~/.vim/vundle.conf
+if filereadable(expand("~/.vim/vundle.vim"))
+  source ~/.vim/vundle.vim
 endif
 
 set nocompatible
