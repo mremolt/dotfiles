@@ -1,7 +1,5 @@
 " vundle config
 source ~/.vim/vundle.vim
-" helper functions
-source ~/.vim/functions.vim
 
 "set term=builtin_ansi
 set nocompatible
@@ -163,7 +161,7 @@ inoremap <F1> <ESC>
 nnoremap <F1> <ESC>
 vnoremap <F1> <ESC>
 
-nnoremap <leader>A :Ack
+nnoremap <leader>a :Ack 
 nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`] 
 nnoremap <leader>r :Rake<CR>
@@ -180,7 +178,11 @@ let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Auto_Open = 0
 
 " auto indent the code
-map <leader>f 1G=G
+map <leader>f mf1G=G`f
 
 " load last file in buffer to current window
 map <leader><leader> <C-^>
+
+" Ctrl-c to toggle comments
+map <C-c> <plug>NERDCommenterToggle<CR>
+imap <C-c> <Esc><plug>NERDCommenterToggle<CR>i
