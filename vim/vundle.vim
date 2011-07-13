@@ -42,6 +42,7 @@ Bundle 'tsaleh/vim-align'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
+Bundle 'Raimondi/delimitMate'
 
 Bundle 'repeat.vim'
 
