@@ -38,6 +38,7 @@ srda() {
 }
 
 export CFLAGS="-march=native -O2"
+export FIXTURES_PATH="spec/fixtures"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -52,3 +53,4 @@ alias gv="gvim -geom 220x60"
 alias eed='cd ~/workspace/erich-erdinger && rvm use ruby-1.9.2 && clear'
 alias mr='cd ~/workspace/marc_remolt && rvm use ruby-1.9.2 && clear'
 alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.2 && clear'
+alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.2 && clear"
