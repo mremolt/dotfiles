@@ -32,7 +32,7 @@ Bundle 'wincent/Command-T'
 Bundle 'mileszs/ack.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'pangloss/vim-javascript'
-Bundle 'hallettj/jslint.vim'
+"Bundle 'hallettj/jslint.vim'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 

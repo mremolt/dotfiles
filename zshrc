@@ -9,7 +9,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler cap command-not-found deb debian gem git github rails3 ruby rvm ssh thor)
+plugins=(cap command-not-found deb debian gem git github rails3 ruby rvm ssh thor)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh/completions.zsh
@@ -53,4 +53,6 @@ alias gv="gvim -geom 220x60"
 alias eed='cd ~/workspace/erich-erdinger && rvm use ruby-1.9.2 && clear'
 alias mr='cd ~/workspace/marc_remolt && rvm use ruby-1.9.2 && clear'
 alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.2 && clear'
-alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.2 && clear"
+alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
+alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
+alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"

@@ -143,9 +143,9 @@ set winminheight=10
 set winheight=999
 
 " deactivate <F1> help
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+inoremap <F1> :redraw!<CR>
+nnoremap <F1> :redraw!<CR>
+vnoremap <F1> :redraw!<CR>>
 
 nnoremap <leader>a :Ack 
 nnoremap <leader>ft Vatzf
