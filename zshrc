@@ -9,10 +9,10 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(cap command-not-found deb debian gem git github rails3 ruby rvm ssh thor)
+plugins=(bundler cap command-not-found deb debian gem git github rails3 ruby thor vundle)
 
 source $ZSH/oh-my-zsh.sh
-source $HOME/.zsh/completions.zsh
+source $HOME/.zsh /completions.zsh
 
 # Customize to your needs...
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games

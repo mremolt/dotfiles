@@ -159,6 +159,7 @@ nnoremap <leader>a :Ack
 nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`] 
 nnoremap <leader>r :Rake<CR>
+nnoremap <leader><space> :noh<cr>
 
 nnoremap <leader>cc :CoffeeCompile<CR>
 nnoremap <leader>cr :CoffeeRun<CR>
