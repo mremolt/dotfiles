@@ -51,8 +51,7 @@ alias gv="gvim -geom 220x60"
 
 # projects
 alias eed='cd ~/workspace/erich-erdinger && rvm use ruby-1.9.2 && clear'
-alias mr='cd ~/workspace/marc_remolt && rvm use ruby-1.9.2 && clear'
-alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.2 && clear'
-alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
+alias mr='cd ~/workspace/marc-remolt && rvm use ruby-1.9.3 && clear'
+alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.3 && clear'
 alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"

@@ -1,5 +1,5 @@
 #!/bin/bash
-#wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh --no-check-certificate -O - | sh
+wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh --no-check-certificate -O - | sh
 
 [ -d $HOME/.config/terminator ] || mkdir -p $HOME/.config/terminator
 ln -sf $(pwd)/config/terminator/config ~/.config/terminator/config

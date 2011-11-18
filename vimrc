@@ -9,7 +9,7 @@ syntax enable
 colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
-call togglebg#map("<F5>")
+call togglebg#map("<F9>")
 
 set relativenumber
 set ruler
@@ -50,8 +50,17 @@ set laststatus=2
 " This is likely a bludgeon to solve some other issue, but it works
 set noequalalways
 
+"SuperTab
+let g:SuperTabContextDefaultCompletionType = "<c-x><c-o>"
+
 " NERDTree configuration
 let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
+let NERDTreeShowBookmarks = 0
+let NERDChristmasTree = 1
+let NERDTreeWinPos = "left"
+let NERDTreeHijackNetrw = 1
+let NERDTreeQuitOnOpen = 1
+let NERDTreeWinSize = 30
 map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
@@ -72,9 +81,6 @@ endif
 
 " make uses real tabs
 au FileType make set noexpandtab
-
-" Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
-au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru}    set ft=ruby
 
 " add json syntax highlighting
 au BufNewFile,BufRead *.json set ft=javascript
@@ -118,8 +124,8 @@ set modelines=10
 set backupdir=~/.vim/backup
 set directory=~/.vim/backup
 
-" Turn off jslint errors by default
-let g:JSLintHighlightErrorLine = 0
+" Turn on jslint errors by default
+let g:JSLintHighlightErrorLine = 1
 
 " % to bounce from do to end etc.
 runtime! macros/matchit.vim
@@ -134,11 +140,13 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 au FocusLost * :wa
 
 " auto resizing of multiple windows
-set winwidth=84
+set winwidth=60
+set winminwidth=58
+set winwidth=999
 " We have to have a winheight bigger than we want to set winminheight. But if
 " we set winheight to be huge before winminheight, the winminheight set will
 " fail.
-set winheight=10
+set winheight=11
 set winminheight=10
 set winheight=999
 
@@ -152,10 +160,17 @@ nnoremap <leader>ft Vatzf
 nnoremap <leader>v V`] 
 nnoremap <leader>r :Rake<CR>
 
-map <F2> :NERDTreeToggle<CR>
-map <F3> :CommandTFlush<cr>\|:CommandT<CR>
-map <F4> <Leader>be
-map <F5> :TlistToggle<CR>
+nnoremap <leader>cc :CoffeeCompile<CR>
+nnoremap <leader>cr :CoffeeRun<CR>
+vnoremap <leader>cc :CoffeeCompile<CR>
+vnoremap <leader>cr :CoffeeRun<CR>
+
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F3> :CommandTFlush<cr>\|:CommandT<CR>
+nnoremap <F4> <Leader>be
+" Press F5 to toggle GUndo tree
+nnoremap <F5> :GundoToggle<CR>
+nnoremap <F6> :TlistToggle<CR>
 
 "taglist settings
 let Tlist_Use_Right_Window = 1
@@ -169,6 +184,29 @@ map <leader>f mf1G=G`f
 " load last file in buffer to current window
 map <leader><leader> <C-^>
 
-" Ctrl-c to toggle comments
-map <C-c> <plug>NERDCommenterToggle<CR>
-imap <C-c> <Esc><plug>NERDCommenterToggle<CR>i
+" Easy commenting
+nnoremap // :TComment<CR>
+vnoremap // :TComment<CR>
+
+
+" Other files to consider Ruby
+au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,Capfile set ft=ruby
+
+"  ---------------------------------------------------------------------------
+"  CoffeeScript
+"  ---------------------------------------------------------------------------
+
+let coffee_compile_vert = 1
+au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+
+"  ---------------------------------------------------------------------------
+"  SASS / SCSS
+"  ---------------------------------------------------------------------------
+
+au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+au BufNewFile,BufReadPost *.sass setl foldmethod=indent
+au BufRead,BufNewFile *.scss set filetype=scss
+
+" When vimrc, either directly or via symlink, is edited, automatically reload it
+autocmd! bufwritepost .vimrc source %
+autocmd! bufwritepost vimrc source %
