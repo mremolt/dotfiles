@@ -1,8 +1,8 @@
 " helper functions
 source ~/.vim/functions.vim
 
-" Command-e for ConqueTerm
-" map <D-e> :call StartTerm()<CR>
+" ,s for ConqueTerm
+map <Leader>s :call StartTerm()<CR>
 
 " Don't beep
 set visualbell
