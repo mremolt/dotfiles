@@ -58,9 +58,7 @@ let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
 let NERDTreeShowBookmarks = 0
 let NERDChristmasTree = 1
 let NERDTreeWinPos = "left"
-let NERDTreeHijackNetrw = 1
-let NERDTreeQuitOnOpen = 1
-let NERDTreeWinSize = 30
+let NERDTreeWinSize = 25
 map <Leader>n :NERDTreeToggle<CR>
 
 " Command-T configuration
@@ -167,11 +165,15 @@ vnoremap <leader>cc :CoffeeCompile<CR>
 vnoremap <leader>cr :CoffeeRun<CR>
 
 nnoremap <F2> :NERDTreeToggle<CR>
+
+" Command-T
 nnoremap <F3> :CommandTFlush<cr>\|:CommandT<CR>
-nnoremap <F4> <Leader>be
-" Press F5 to toggle GUndo tree
-nnoremap <F5> :GundoToggle<CR>
-nnoremap <F6> :TlistToggle<CR>
+nnoremap <F4> :CommandTBuffer<CR>
+nnoremap <F5> :CommandTJump<CR>
+
+" Press F6 to toggle GUndo tree
+nnoremap <F6> :GundoToggle<CR>
+nnoremap <F7> :TlistToggle<CR>
 
 "taglist settings
 let Tlist_Use_Right_Window = 1

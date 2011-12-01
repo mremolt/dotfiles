@@ -24,7 +24,6 @@ Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
 
 Bundle 'vim-scripts/ZoomWin'
-Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'vim-scripts/matchit.zip'
 Bundle 'rson/vim-conque'
 

@@ -55,3 +55,4 @@ alias mr='cd ~/workspace/marc-remolt && rvm use ruby-1.9.3 && clear'
 alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.3 && clear'
 alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
+alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
