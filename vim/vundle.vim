@@ -45,7 +45,7 @@ Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'Raimondi/delimitMate'
 Bundle "chrismetcalf/vim-yankring"
 Bundle "chrismetcalf/vim-taglist"
-Bundle "sophacles/vim-bundle-sparkup"
+Bundle "mattn/zencoding-vim"
 Bundle "panozzaj/vim-autocorrect"
 Bundle "tsaleh/vim-tcomment"
 Bundle "sjl/gundo.vim"
