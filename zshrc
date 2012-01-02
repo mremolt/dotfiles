@@ -14,6 +14,10 @@ plugins=(bundler cap command-not-found deb debian gem git github rails3 ruby tho
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh /completions.zsh
 
+# special zsh features
+setopt extended_glob
+autoload -U zmv
+
 # Customize to your needs...
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 
@@ -35,6 +39,10 @@ sra() {
 # svn revert all and remove all uncommited files
 srda() {
   sdau && sra
+}
+
+kp() {
+  kill ${$(netstat -tlpn 2> /dev/null | grep ":3000" | awk '{ print $7 }')%/}
 }
 
 export CFLAGS="-march=native -O2"
