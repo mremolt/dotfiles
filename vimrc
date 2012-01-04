@@ -200,14 +200,14 @@ au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,
 "  ---------------------------------------------------------------------------
 
 let coffee_compile_vert = 1
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+" au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS
 "  ---------------------------------------------------------------------------
 
-au BufNewFile,BufReadPost *.scss setl foldmethod=indent
-au BufNewFile,BufReadPost *.sass setl foldmethod=indent
+" au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+" au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it

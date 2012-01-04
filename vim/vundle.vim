@@ -32,7 +32,6 @@ Bundle 'mileszs/ack.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'pangloss/vim-javascript'
 Bundle 'hallettj/jslint.vim'
-Bundle 'kchmck/vim-coffee-script'
 Bundle "cakebaker/scss-syntax.vim.git"
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
@@ -53,6 +52,10 @@ Bundle "clones/vim-fuzzyfinder"
 Bundle "godlygeek/tabular"
 Bundle "vim-scripts/Gist.vim"
 Bundle "vim-scripts/L9"
+
+Bundle 'kchmck/vim-coffee-script'
+Bundle "claco/jasmine.vim"
+
 
 Bundle 'repeat.vim'
 Bundle "jQuery"
