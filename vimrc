@@ -164,6 +164,10 @@ nnoremap <leader>cr :CoffeeRun<CR>
 vnoremap <leader>cc :CoffeeCompile<CR>
 vnoremap <leader>cr :CoffeeRun<CR>
 
+vnoremap <leader>s S\<strong\>
+
+map <C-T> c<strong><C-R>"</strong><ESC>
+
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Command-T

@@ -36,8 +36,12 @@ Bundle "cakebaker/scss-syntax.vim.git"
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'ervandew/supertab'
 
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "honza/snipmate-snippets"
+Bundle 'garbas/snipmate.vim'
+
 Bundle 'taq/vim-rspec'
-Bundle 'msanders/snipmate.vim'
 Bundle 'tsaleh/vim-align'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
