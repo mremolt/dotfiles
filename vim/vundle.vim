@@ -39,7 +39,7 @@ Bundle 'ervandew/supertab'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
-Bundle 'garbas/snipmate.vim'
+Bundle "garbas/vim-snipmate"
 
 Bundle 'taq/vim-rspec'
 Bundle 'tsaleh/vim-align'
