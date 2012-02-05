@@ -56,3 +56,4 @@ alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.3 && 
 alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
 alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
+alias gb="cd ~/workspace/guestbook_backbone && rvm use 1.9.3-p0-perf && clear"
