@@ -40,7 +40,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/assets/*,public/assets-test/*
 
 " Status bar
 set laststatus=2
@@ -164,6 +164,10 @@ nnoremap <leader>cr :CoffeeRun<CR>
 vnoremap <leader>cc :CoffeeCompile<CR>
 vnoremap <leader>cr :CoffeeRun<CR>
 
+vnoremap <leader>s S\<strong\>
+
+map <C-T> c<strong><C-R>"</strong><ESC>
+
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Command-T
@@ -200,14 +204,14 @@ au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,
 "  ---------------------------------------------------------------------------
 
 let coffee_compile_vert = 1
-au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
+" au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS
 "  ---------------------------------------------------------------------------
 
-au BufNewFile,BufReadPost *.scss setl foldmethod=indent
-au BufNewFile,BufReadPost *.sass setl foldmethod=indent
+" au BufNewFile,BufReadPost *.scss setl foldmethod=indent
+" au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
