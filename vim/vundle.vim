@@ -47,7 +47,7 @@ Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'Raimondi/delimitMate'
 Bundle "chrismetcalf/vim-yankring"
-Bundle "chrismetcalf/vim-taglist"
+Bundle "majutsushi/tagbar"
 Bundle "mattn/zencoding-vim"
 Bundle "panozzaj/vim-autocorrect"
 Bundle "tomtom/tcomment_vim"
@@ -59,7 +59,6 @@ Bundle "vim-scripts/L9"
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle "claco/jasmine.vim"
-
 
 Bundle 'repeat.vim'
 Bundle "jQuery"

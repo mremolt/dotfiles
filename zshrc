@@ -67,7 +67,9 @@ alias gv="gvim -geom 220x60"
 alias eed='cd ~/workspace/erich-erdinger && rvm use ruby-1.9.2 && clear'
 alias mr='cd ~/workspace/marc-remolt && rvm use ruby-1.9.3 && clear'
 alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.3 && clear'
-alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3-p0-perf && clear"
+alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3-p125-perf && clear"
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
 alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
 alias gb="cd ~/workspace/guestbook_backbone && rvm use 1.9.3-p0-perf && clear"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
