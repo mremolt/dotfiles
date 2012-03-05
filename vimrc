@@ -175,7 +175,7 @@ let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Auto_Open = 0
 
-let g:EasyMotion_leader_key = '<Leader>m'
+let g:EasyMotion_leader_key = '<C-m>'
 
 " auto indent the code
 map <leader>f mf1G=G`f
