@@ -40,7 +40,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/assets/*,public/assets-test/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/assets/*,public/assets-test/*,tmp/*
 
 " Status bar
 set laststatus=2
@@ -139,9 +139,9 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 au FocusLost * :wa
 
 " deactivate <F1> help
-inoremap <F1> :redraw!<CR>
-nnoremap <F1> :redraw!<CR>
-vnoremap <F1> :redraw!<CR>>
+inoremap <F1> :redraw!<CR>:noh<CR>
+nnoremap <F1> :redraw!<CR>:noh<CR>
+vnoremap <F1> :redraw!<CR>:noh<CR>
 
 nnoremap <leader>a :Ack 
 nnoremap <leader>ft Vatzf

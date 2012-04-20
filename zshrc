@@ -71,5 +71,9 @@ alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
 alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
 alias gb="cd ~/workspace/guestbook_backbone && rvm use 1.9.3-p0-perf && clear"
+alias es="cd ~/workspace/gfk_emoscan_admin/source/dcs_emoscan && rvm use ruby-1.9.3-p125-perf && clear"
+alias ga="cd ~/workspace/gfk_answers/source && rvm use ruby-1.9.3-p125-perf && clear"
+
+alias stunden="(cd ~/workspace/dcs_stunden && ./ci.sh)"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

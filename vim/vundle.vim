@@ -46,6 +46,7 @@ Bundle "tomtom/tcomment_vim"
 Bundle "sjl/gundo.vim"
 Bundle "vim-scripts/Gist.vim"
 Bundle "vim-scripts/L9"
+Bundle "Lokaltog/vim-powerline"
 
 Bundle 'kchmck/vim-coffee-script'
 Bundle "claco/jasmine.vim"
