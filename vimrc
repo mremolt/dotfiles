@@ -5,10 +5,11 @@ source ~/.vim/vundle.vim
 set nocompatible
 
 " activate solarized theme
+set t_Co=256
 syntax enable
-colorscheme solarized
 set background=dark
 let g:solarized_termcolors=256
+colorscheme solarized
 call togglebg#map("<F9>")
 
 set relativenumber
@@ -165,6 +166,8 @@ vnoremap <leader>cc :CoffeeCompile<CR>
 vnoremap <leader>cr :CoffeeRun<CR>
 
 vnoremap <leader>s S\<strong\>
+
+nnoremap <leader>p "+p
 
 map <C-T> c<strong><C-R>"</strong><ESC>
 

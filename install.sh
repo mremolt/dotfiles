@@ -9,6 +9,7 @@ ln -sf $(pwd)/zshrc ~/.zshrc
 
 ln -sf $(pwd)/vim ~/.vim
 ln -sf $(pwd)/zsh ~/.zsh
+ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/bin ~/bin
 
 cd vim/bundle/Command-T

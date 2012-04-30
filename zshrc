@@ -47,6 +47,7 @@ kp() {
 
 export CFLAGS="-march=native -O2"
 export FIXTURES_PATH="spec/fixtures"
+export EDITOR="/usr/bin/vim"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -65,3 +66,11 @@ alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-
 alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
 alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
 alias gb="cd ~/workspace/guestbook_backbone && rvm use 1.9.3-p0-perf && clear"
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
