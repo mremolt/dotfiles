@@ -41,7 +41,7 @@ set smartcase
 
 " Tab completion
 set wildmode=list:longest,list:full
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/assets/*,public/assets-test/*
+set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/assets/*,public/assets-test/*,tmp/*
 
 " Status bar
 set laststatus=2
@@ -71,6 +71,7 @@ map <Leader>z :ZoomWin<CR>
 " CTags
 map <Leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <C-\> :tnext<CR>
+"set tags=./tags,./TAGS,tags,TAGS,.coffee-tags
 
 " Remember last location in file
 if has("autocmd")
@@ -138,21 +139,10 @@ let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 " save on loosing focus
 au FocusLost * :wa
 
-" auto resizing of multiple windows
-set winwidth=60
-set winminwidth=58
-set winwidth=999
-" We have to have a winheight bigger than we want to set winminheight. But if
-" we set winheight to be huge before winminheight, the winminheight set will
-" fail.
-set winheight=11
-set winminheight=10
-set winheight=999
-
 " deactivate <F1> help
-inoremap <F1> :redraw!<CR>
-nnoremap <F1> :redraw!<CR>
-vnoremap <F1> :redraw!<CR>>
+inoremap <F1> :redraw!<CR>:noh<CR>
+nnoremap <F1> :redraw!<CR>:noh<CR>
+vnoremap <F1> :redraw!<CR>:noh<CR>
 
 nnoremap <leader>a :Ack 
 nnoremap <leader>ft Vatzf
@@ -180,13 +170,15 @@ nnoremap <F5> :CommandTJump<CR>
 
 " Press F6 to toggle GUndo tree
 nnoremap <F6> :GundoToggle<CR>
-nnoremap <F7> :TlistToggle<CR>
+nnoremap <F7> :TagbarToggle<CR>
 
 "taglist settings
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
 let Tlist_File_Fold_Auto_Close = 1
 let Tlist_Auto_Open = 0
+
+let g:EasyMotion_leader_key = '<C-m>'
 
 " auto indent the code
 map <leader>f mf1G=G`f
@@ -216,6 +208,9 @@ let coffee_compile_vert = 1
 " au BufNewFile,BufReadPost *.scss setl foldmethod=indent
 " au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
+
+au BufNewFile,BufRead *.jst set syntax=jst
+au BufNewFile,BufRead *.jst.ejs set syntax=jst
 
 " When vimrc, either directly or via symlink, is edited, automatically reload it
 autocmd! bufwritepost .vimrc source %

@@ -20,6 +20,7 @@ autoload -U zmv
 
 # Customize to your needs...
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 # svn add all ;-)
 saa() {
@@ -49,6 +50,12 @@ export CFLAGS="-march=native -O2"
 export FIXTURES_PATH="spec/fixtures"
 export EDITOR="/usr/bin/vim"
 
+export RUBY_HEAP_MIN_SLOTS=1000000
+export RUBY_HEAP_SLOTS_INCREMENT=1000000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_HEAP_FREE_MIN=500000
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # Fix for CTRL-Arrow
@@ -59,18 +66,15 @@ bindkey "5D" backward-word
 alias gv="gvim -geom 220x60"
 
 # projects
-alias eed='cd ~/workspace/erich-erdinger && rvm use ruby-1.9.2 && clear'
-alias mr='cd ~/workspace/marc-remolt && rvm use ruby-1.9.3 && clear'
-alias rwi='cd ~/workspace/refinerycms-wordpress-import && rvm use ruby-1.9.3 && clear'
-alias mo="cd ~/workspace/gfk_mobilitaetspanel/source/mobilitaet && rvm use ruby-1.9.3 && clear"
-alias panel="cd ~/workspace/rog_panel/panel && rvm use ree && clear"
-alias rog="cd ~/workspace/20111025_rails3_upgrade && rvm use 1.9.3 && clear"
-alias gb="cd ~/workspace/guestbook_backbone && rvm use 1.9.3-p0-perf && clear"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 export RUBY_HEAP_MIN_SLOTS=1000000
 export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+=======
+alias es="cd ~/workspace/gfk_emoscan_admin/source/dcs_emoscan && rvm use ruby-1.9.3-p125-perf && clear"
+alias ga="cd ~/workspace/gfk_answers/source && rvm use ruby-1.9.3-p125-perf && clear"
+
+alias stunden="(cd ~/workspace/dcs_stunden && ./ci.sh)"
+
