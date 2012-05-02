@@ -169,6 +169,8 @@ nnoremap <F5> :CommandTJump<CR>
 nnoremap <F6> :GundoToggle<CR>
 nnoremap <F7> :TagbarToggle<CR>
 
+:nnoremap <silent> <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
 "taglist settings
 let Tlist_Use_Right_Window = 1
 let Tlist_GainFocus_On_ToggleOpen = 1
