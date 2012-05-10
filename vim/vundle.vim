@@ -30,6 +30,7 @@ Bundle 'mileszs/ack.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle "cakebaker/scss-syntax.vim.git"
 Bundle 'altercation/vim-colors-solarized'
+Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"

@@ -9,7 +9,7 @@ set t_Co=256
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
+colorscheme desert
 call togglebg#map("<F9>")
 
 set relativenumber

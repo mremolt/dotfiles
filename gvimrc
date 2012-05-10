@@ -1,6 +1,8 @@
 " helper functions
 source ~/.vim/functions.vim
 
+colorscheme solarized
+
 " ,s for ConqueTerm
 map <Leader>s :call StartTerm()<CR>
 

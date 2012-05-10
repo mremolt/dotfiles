@@ -73,6 +73,8 @@ export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 alias es="cd ~/workspace/gfk_emoscan_admin/source/dcs_emoscan && rvm use ruby-1.9.3-p125-perf && clear"
 alias ga="cd ~/workspace/gfk_answers/source && rvm use ruby-1.9.3-p125-perf && clear"
 alias stunden="(cd ~/workspace/dcs_stunden && ./ci.sh)"
