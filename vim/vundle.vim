@@ -29,6 +29,7 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle 'mileszs/ack.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle "cakebaker/scss-syntax.vim.git"
+Bundle 'ap/vim-css-color'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
 
@@ -37,7 +38,8 @@ Bundle "tomtom/tlib_vim"
 Bundle "honza/snipmate-snippets"
 Bundle "garbas/vim-snipmate"
 
-Bundle 'taq/vim-rspec'
+Bundle 'skwp/vim-rspec'
+Bundle 'vim-ruby/vim-ruby'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'Raimondi/delimitMate'

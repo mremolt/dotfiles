@@ -32,6 +32,7 @@ set list listchars=tab:\ \ ,trail:·
 set colorcolumn=85
 set textwidth=79
 set formatoptions=qrn1
+set autoread
 
 " Searching
 set hlsearch
