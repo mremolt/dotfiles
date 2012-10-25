@@ -9,7 +9,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler cap command-not-found deb debian gem git github rails3 ruby thor vundle)
+plugins=(bundler cap command-not-found deb debian dircycle gem git github heroku rails3 rvm ruby thor vundle)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh /completions.zsh
@@ -69,18 +69,4 @@ bindkey "5D" backward-word
 
 # shortcut for gvim
 alias gv="gvim -geom 220x60"
-
-# projects
-
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-
 alias tmux="TERM=screen-256color-bce tmux"
-
-alias es="cd ~/workspace/gfk_emoscan_admin/source/dcs_emoscan && rvm use ruby-1.9.3-p125-perf && clear"
-alias ga="cd ~/workspace/gfk_answers/source && rvm use ruby-1.9.3-p125-perf && clear"
-alias stunden="(cd ~/workspace/dcs_stunden && svn up && svn ci -m 'Stunden Marc')"
-alias skype="LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so /usr/bin/skype"
