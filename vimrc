@@ -161,6 +161,8 @@ nnoremap <leader>p "+p
 
 map <C-T> c<strong><C-R>"</strong><ESC>
 
+map <leader>h :!google-chrome %:p<CR><CR>
+
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Command-T
@@ -173,6 +175,8 @@ nnoremap <F6> :GundoToggle<CR>
 nnoremap <F7> :TagbarToggle<CR>
 
 :nnoremap <silent> <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
+
+nnoremap - :Switch<cr>
 
 "taglist settings
 let Tlist_Use_Right_Window = 1

@@ -46,6 +46,10 @@ kp() {
   kill ${$(netstat -tlpn 2> /dev/null | grep ":3000" | awk '{ print $7 }')%/}
 }
 
+paskill() {
+  kill $(netstat -tlpn 2>/dev/null | grep '0.0.0.0:3000' | awk '{print $7}' | sed 's/[^0-9]//g')
+}
+
 export CFLAGS="-march=native -O2"
 export FIXTURES_PATH="spec/fixtures"
 export EDITOR="/usr/bin/vim"
@@ -55,6 +59,7 @@ export RUBY_HEAP_SLOTS_INCREMENT=1000000
 export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
 export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_HEAP_FREE_MIN=500000
+export JAVA_OPTS="-J-client"
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
@@ -77,5 +82,5 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 alias es="cd ~/workspace/gfk_emoscan_admin/source/dcs_emoscan && rvm use ruby-1.9.3-p125-perf && clear"
 alias ga="cd ~/workspace/gfk_answers/source && rvm use ruby-1.9.3-p125-perf && clear"
-alias stunden="(cd ~/workspace/dcs_stunden && ./ci.sh)"
-
+alias stunden="(cd ~/workspace/dcs_stunden && svn up && svn ci -m 'Stunden Marc')"
+alias skype="LD_PRELOAD=/usr/lib/i386-linux-gnu/libv4l/v4l1compat.so /usr/bin/skype"

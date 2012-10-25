@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let Vundle manage Vundle
-" required! 
+" required!
 Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-endwise'
 Bundle 'tpope/vim-rails'
@@ -31,6 +31,7 @@ Bundle 'michaeljsmith/vim-indent-object'
 Bundle "cakebaker/scss-syntax.vim.git"
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
+Bundle 'AndrewRadev/switch.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -54,6 +55,9 @@ Bundle "claco/jasmine.vim"
 Bundle 'pangloss/vim-javascript'
 Bundle 'hallettj/jslint.vim'
 Bundle "jQuery"
+
+" Scala support
+Bundle "ornicar/vim-scala"
 
 
 filetype plugin indent on
