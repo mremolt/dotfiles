@@ -1,18 +1,18 @@
 snippet ans
-	<answer label="${1}" name="${2}">
-	  <atxt>
-	    <![CDATA[${3}]]>
-	  </atxt>
+	<answer value="${1}">
+	  <text>
+	    <![CDATA[${2}]]>
+	  </text>
 	</answer>
 snippet ques
-	<ques typ="${1}" label="${2}" next="${3}" id="${4}">
-	  <qhead>
-	    <qtxt>
+	<question id="${1}" type="${2}" label="${3}" alt_label="${4}">
+	  <head>
+	    <text>
 	      <![CDATA[${5}]]>
-	    </qtxt>
-	  </qhead>
+	    </text>
+	  </head>
 	
-	  <qcontent>
+	  <body>
 	    ${6}
-	  </qcontent>
-	</ques>
+	  </body>
+	</question>
