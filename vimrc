@@ -175,8 +175,10 @@ nnoremap <F5> :CommandTJump<CR>
 nnoremap <F6> :GundoToggle<CR>
 nnoremap <F7> :TagbarToggle<CR>
 
+" remove trailing spaces
 :nnoremap <silent> <F8> :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>
 
+" switch.vim
 nnoremap - :Switch<cr>
 
 "taglist settings
@@ -211,7 +213,6 @@ let coffee_compile_vert = 1
 "  ---------------------------------------------------------------------------
 "  SASS / SCSS
 "  ---------------------------------------------------------------------------
-
 " au BufNewFile,BufReadPost *.scss setl foldmethod=indent
 " au BufNewFile,BufReadPost *.sass setl foldmethod=indent
 au BufRead,BufNewFile *.scss set filetype=scss
