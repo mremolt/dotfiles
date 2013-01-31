@@ -139,6 +139,7 @@ set showcmd
 " ack is named ack-grep under Ubuntu
 " let g:ackprg="ack-grep -H --nocolor --nogroup --column"
 let g:ackprg = 'ag --nogroup --nocolor --column'
+let g:user_zen_expandabbr_key = '<leader>y'
 
 " save on loosing focus
 au FocusLost * :wa
@@ -154,18 +155,13 @@ nnoremap <leader>v V`]
 nnoremap <leader>r :Rake<CR>
 nnoremap <leader><space> :noh<cr>
 
-nnoremap <leader>cc :CoffeeCompile<CR>
-nnoremap <leader>cr :CoffeeRun<CR>
-vnoremap <leader>cc :CoffeeCompile<CR>
-vnoremap <leader>cr :CoffeeRun<CR>
-
 vnoremap <leader>s S\<strong\>
 
 nnoremap <leader>p "+p
 
 map <C-T> c<strong><C-R>"</strong><ESC>
-
 map <leader>h :!google-chrome %:p<CR><CR>
+
 
 nnoremap <F2> :NERDTreeToggle<CR>
 

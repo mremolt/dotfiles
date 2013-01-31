@@ -11,6 +11,7 @@ ln -sf $(pwd)/vim ~/.vim
 ln -sf $(pwd)/zsh ~/.zsh
 ln -sf $(pwd)/tmux.conf ~/.tmux.conf
 ln -sf $(pwd)/bin ~/bin
+ln -sf $(pwd)/coffeelint.json ~/.coffeelint.json
 
 cd vim/bundle/Command-T
 rvm use system
