@@ -9,7 +9,9 @@ set t_Co=256
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme desert
+colorscheme solarized
+" colorscheme desert
+
 call togglebg#map("<F9>")
 
 set relativenumber
@@ -146,9 +148,9 @@ inoremap <F1> :redraw!<CR>:noh<CR>
 nnoremap <F1> :redraw!<CR>:noh<CR>
 vnoremap <F1> :redraw!<CR>:noh<CR>
 
-nnoremap <leader>a :Ack 
+nnoremap <leader>a :Ack
 nnoremap <leader>ft Vatzf
-nnoremap <leader>v V`] 
+nnoremap <leader>v V`]
 nnoremap <leader>r :Rake<CR>
 nnoremap <leader><space> :noh<cr>
 
@@ -168,12 +170,19 @@ map <leader>h :!google-chrome %:p<CR><CR>
 nnoremap <F2> :NERDTreeToggle<CR>
 
 " Command-T
-nnoremap <F3> :CommandTFlush<cr>\|:CommandT<CR>
-nnoremap <F4> :CommandTBuffer<CR>
-nnoremap <F5> :CommandTJump<CR>
+" nnoremap <F3> :CommandTFlush<cr>\|:CommandT<CR>
+" nnoremap <F4> :CommandTBuffer<CR>
+" nnoremap <F5> :CommandTJump<CR>
 
-" Press F6 to toggle GUndo tree
-nnoremap <F6> :GundoToggle<CR>
+" ctrlp.vim
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn)|tmp|log)$'
+let g:ctrlp_working_path_mode = ''
+
+nnoremap <F3> :CtrlP<CR>
+nnoremap <F4> :CtrlPBuffer<CR>
+nnoremap <F5> :CtrlPMRU<CR>
+
+
 nnoremap <F7> :TagbarToggle<CR>
 
 " remove trailing spaces
