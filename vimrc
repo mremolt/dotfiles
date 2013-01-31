@@ -135,7 +135,8 @@ runtime! macros/matchit.vim
 set showcmd
 
 " ack is named ack-grep under Ubuntu
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+" let g:ackprg="ack-grep -H --nocolor --nogroup --column"
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " save on loosing focus
 au FocusLost * :wa

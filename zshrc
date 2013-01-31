@@ -9,7 +9,7 @@ export ZSH_THEME="robbyrussell"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler cap command-not-found deb debian dircycle gem git github heroku rails3 rvm ruby thor vundle)
+plugins=(bundler cap command-not-found deb debian dircycle gem git git-extras github heroku history-substring-search rails3 ruby svn thor vundle)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.zsh /completions.zsh
@@ -18,55 +18,61 @@ source $HOME/.zsh /completions.zsh
 setopt extended_glob
 autoload -U zmv
 
-# Customize to your needs...
-export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
-export PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-# svn add all ;-)
-saa() {
-  svn add $(svn status | egrep '^\?' | awk '{print $2}')
-}
-
-# svn delete all uncommited files
-sdau() {
-  rm -rf $(svn status | egrep '^\?' | awk '{print $2}')
-}
-
-# svn revert all
-sra() {
-  svn revert -R *
-}
-
-# svn revert all and remove all uncommited files
-srda() {
-  sdau && sra
-}
-
-kp() {
-  kill ${$(netstat -tlpn 2> /dev/null | grep ":3000" | awk '{ print $7 }')%/}
-}
-
-paskill() {
-  kill $(netstat -tlpn 2>/dev/null | grep '0.0.0.0:3000' | awk '{print $7}' | sed 's/[^0-9]//g')
-}
-
-export CFLAGS="-march=native -O2"
-export FIXTURES_PATH="spec/fixtures"
-export EDITOR="/usr/bin/vim"
-
-export RUBY_HEAP_MIN_SLOTS=1000000
-export RUBY_HEAP_SLOTS_INCREMENT=1000000
-export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
-export RUBY_GC_MALLOC_LIMIT=1000000000
-export RUBY_HEAP_FREE_MIN=500000
-export JAVA_OPTS="-J-client"
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
-
 # Fix for CTRL-Arrow
 bindkey "5C" forward-word
 bindkey "5D" backward-word
 
-# shortcut for gvim
+
+export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:$HOME/bin/Sencha/Cmd/3.0.0.250
+export PATH=$PATH:/opt/WebStorm/bin
+
+export LD_PRELOAD='/usr/lib/libtcmalloc_minimal_debug.so.4'
+export CFLAGS="-march=native -O3 -pipe -fomit-frame-pointer"
+export FIXTURES_PATH="spec/fixtures"
+export EDITOR="/usr/bin/vim"
+
+export RUBY_GC_MALLOC_LIMIT=1000000000
+export RUBY_FREE_MIN=500000
+export RUBY_HEAP_MIN_SLOTS=40000
+
+# rbenv
+eval "$(rbenv init -)"
+
 alias gv="gvim -geom 220x60"
 alias tmux="TERM=screen-256color-bce tmux"
+alias rvm="rbenv"
+
+unalias ag
+
+# svn add all ;-)
+function saa() {
+  svn add $(svn status | egrep '^\?' | awk '{print $2}')
+}
+
+# svn delete all uncommited files
+function sdau() {
+  rm -rf $(svn status | egrep '^\?' | awk '{print $2}')
+}
+
+# svn revert all
+function sra() {
+  svn revert -R *
+}
+
+# svn revert all and remove all uncommited files
+function srda() {
+  sdau && sra
+}
+
+function kp() {
+  kill ${$(netstat -tlpn 2> /dev/null | grep ":3000" | awk '{ print $7 }')%/}
+}
+
+function paskill() {
+  kill $(netstat -tlpn 2>/dev/null | grep '0.0.0.0:3000' | awk '{print $7}' | sed 's/[^0-9]//g')
+}
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

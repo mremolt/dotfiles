@@ -13,8 +13,9 @@ Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-cucumber'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
-Bundle 'tpope/vim-cucumber'
-Bundle "tpope/vim-markdown"
+Bundle 'tpope/vim-markdown'
+Bundle 'tpope/vim-haml'
+Bundle 'nono/vim-handlebars'
 
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
@@ -29,6 +30,7 @@ Bundle "Lokaltog/vim-easymotion"
 Bundle 'mileszs/ack.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle "cakebaker/scss-syntax.vim.git"
+Bundle 'groenewege/vim-less'
 Bundle 'ap/vim-css-color'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jeffkreeftmeijer/vim-numbertoggle'
@@ -57,9 +59,5 @@ Bundle "claco/jasmine.vim"
 Bundle 'pangloss/vim-javascript'
 Bundle 'hallettj/jslint.vim'
 Bundle "jQuery"
-
-" Scala support
-Bundle "ornicar/vim-scala"
-
 
 filetype plugin indent on
