@@ -1,0 +1,13 @@
+// vim:filetype=javascript
+{
+  "indent": 2,
+  "strict": true,
+  "browser": true,
+  "devel": true,
+  "jquery": true,
+
+  "globals": {
+    "require": true,
+    "phantom": true
+  }
+}
