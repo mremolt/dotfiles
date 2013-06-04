@@ -22,6 +22,9 @@ autoload -U zmv
 bindkey "5C" forward-word
 bindkey "5D" backward-word
 
+bindkey "^[[A" history-search-backward
+bindkey "^[[B" history-search-forward]]
+
 
 export PATH=~/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
 export PATH="$HOME/.rbenv/bin:$PATH"
@@ -37,11 +40,15 @@ export RUBY_GC_MALLOC_LIMIT=1000000000
 export RUBY_FREE_MIN=500000
 export RUBY_HEAP_MIN_SLOTS=40000
 
+export COFFEELINT_CONFIG=$HOME/.coffeelint.json
+export JRUBY_OPTS="-J-XX:ReservedCodeCacheSize=100m -J-Xmn512m -J-Xms2048m -J-Xmx2048m -J-server -Xcext.enabled=true"
+
 # rbenv
 eval "$(rbenv init -)"
 
 alias gv="gvim -geom 220x60"
 alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=xterm-256color tmux -2"
 alias rvm="rbenv"
 
 unalias ag

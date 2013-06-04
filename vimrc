@@ -9,8 +9,7 @@ set t_Co=256
 syntax enable
 set background=dark
 let g:solarized_termcolors=256
-colorscheme solarized
-" colorscheme desert
+colorscheme desert
 
 call togglebg#map("<F9>")
 
@@ -195,6 +194,9 @@ let Tlist_Auto_Open = 0
 
 let g:EasyMotion_leader_key = '<C-m>'
 
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_javascript_hshint_args='--config ~/.jshintrc'
+
 " auto indent the code
 map <leader>f mf1G=G`f
 
@@ -214,6 +216,7 @@ au BufRead,BufNewFile Gemfile,Rakefile,Thorfile,config.ru,Vagrantfile,Guardfile,
 "  ---------------------------------------------------------------------------
 
 let coffee_compile_vert = 1
+let coffee_lint_options = '-f ~/.coffeelint.json'
 " au BufNewFile,BufReadPost *.coffee setl foldmethod=indent
 
 "  ---------------------------------------------------------------------------

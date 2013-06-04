@@ -1,9 +1,3 @@
-" ConqueTerm wrapper
-function StartTerm()
-  execute 'ConqueTermSplit ' . $SHELL . ' --login'
-  setlocal listchars=tab:\ \ 
-endfunction
-
 " Project Tree
 autocmd VimEnter * call s:CdIfDirectory(expand("<amatch>"))
 autocmd FocusGained * call s:UpdateNERDTree()
@@ -147,6 +141,6 @@ endfunction
 " Define the NERDTree-aware aliases
 call s:DefineCommand("cd", "ChangeDirectory")
 call s:DefineCommand("touch", "Touch")
-call s:DefineCommand("rm", "Remove")
+" call s:DefineCommand("rm", "Remove")
 call s:DefineCommand("e", "Edit")
 call s:DefineCommand("mkdir", "Mkdir")

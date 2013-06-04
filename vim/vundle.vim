@@ -36,7 +36,8 @@ Bundle "mattn/zencoding-vim"
 Bundle 'Raimondi/delimitMate'
 Bundle 'kana/vim-textobj-user'
 Bundle "garbas/vim-snipmate"
-Bundle "honza/snipmate-snippets"
+" Bundle 'MarcWeber/ultisnips'
+Bundle "honza/vim-snippets"
 Bundle 'AndrewRadev/switch.vim'
 Bundle 'michaeljsmith/vim-indent-object'
 Bundle 'scrooloose/syntastic'
@@ -58,6 +59,7 @@ Bundle "cakebaker/scss-syntax.vim"
 Bundle 'groenewege/vim-less'
 Bundle 'tpope/vim-markdown'
 Bundle 'nono/vim-handlebars'
+Bundle 'avakhov/vim-yaml'
 
 
 " frameworks & libs
@@ -67,7 +69,7 @@ Bundle "jQuery"
 
 " testing & code quality
 Bundle 'skwp/vim-rspec'
-Bundle 'walm/jshint.vim'
+Bundle 'sleistner/vim-jshint'
 Bundle 'claco/jasmine.vim'
 Bundle 'skalnik/vim-vroom'
 

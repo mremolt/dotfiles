@@ -1,4 +1,3 @@
-// vim:filetype=javascript
 {
   "indent": 2,
   "strict": true,
@@ -8,6 +7,8 @@
 
   "globals": {
     "require": true,
-    "phantom": true
+    "phantom": true,
+    "__dirname": true,
+    "process": true
   }
 }
